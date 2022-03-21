@@ -22,6 +22,7 @@ namespace Zadanie3 {
                 int[] arr = new int[_Key.Length];
                 int last_value = 0;
 
+                // Obliczanie wartosci klucza
                 for (char i = 'A'; i < 'Z'; i++) {
                     for (int j = 0; j < _Key.Length; j++) {
                         if (_Key[j] == i) {
@@ -30,6 +31,7 @@ namespace Zadanie3 {
                     }
                 }
 
+                // Szyfrowanie przy uzyciu wczesniej obliczonych wartosci
                 for (int i = 0; i < arr.Length; i++) {
                     int offset = Array.IndexOf(arr, i);
 
@@ -54,6 +56,7 @@ namespace Zadanie3 {
                 int[] arr = new int[_Key.Length];
                 int last_value = 0, it = 0;
 
+                // Obliczanie wartosci klucza
                 for (char i = 'A'; i < 'Z'; i++) {
                     for (int j = 0; j < _Key.Length; j++) {
                         if (_Key[j] == i) {
@@ -62,6 +65,7 @@ namespace Zadanie3 {
                     }
                 }
 
+                // Odszyfrowanie przy uzyciu wczesniej obliczonych wartosci
                 while (_Decrypted.Length < length) {
                     for (int i = 0; i < _Key.Length; i++) {
                         var index = arr[i];
